@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "condition": {
+      "initiatorDomains": ["doubao.com", "ciciai.com"],
+      "resourceTypes": ["image", "sub_frame"]
+    },
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        {
+          "header": "Referer",
+          "operation": "remove"
+        }
+      ],
+      "responseHeaders": [
+        {
+          "header": "Content-Security-Policy",
+          "operation": "remove"
+        },
+        {
+          "header": "X-Frame-Options",
+          "operation": "remove"
+        }
+      ]
+    }
+  }
+]

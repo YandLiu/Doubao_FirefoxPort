@@ -1,0 +1,48 @@
+version: 1
+web:
+  dir: .
+  runtime: worker
+  isCustomServer: false
+routes:
+  - src: /content/**
+    dest:
+      type: web
+      path: content.html
+      ssr: false
+      redirect: ""
+      stream: false
+  - src: /options/**
+    dest:
+      type: web
+      path: options.html
+      ssr: false
+      redirect: ""
+      stream: false
+  - src: /popup/**
+    dest:
+      type: web
+      path: popup.html
+      ssr: false
+      redirect: ""
+      stream: false
+  - src: /side_panel/**
+    dest:
+      type: web
+      path: side_panel.html
+      ssr: false
+      redirect: ""
+      stream: false
+  - src: /i18n_resources/**
+    dest:
+      type: web
+      path: i18n_resources.html
+      ssr: false
+      redirect: ""
+      stream: false
+  - src: /subframe_scripts/**
+    dest:
+      type: web
+      path: subframe_scripts.html
+      ssr: false
+      redirect: ""
+      stream: false
